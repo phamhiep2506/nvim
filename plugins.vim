@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/plugins')
   " Lsp
   Plug 'neovim/nvim-lspconfig' " Lsp 
   Plug 'hrsh7th/nvim-compe' " Complete Lsp
+  Plug 'glepnir/lspsaga.nvim'
   Plug 'onsails/lspkind-nvim' " Icon Lsp
   Plug 'folke/trouble.nvim' " Show log error
 

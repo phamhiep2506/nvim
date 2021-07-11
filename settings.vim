@@ -1,0 +1,14 @@
+source ~/.config/nvim/lua/nv-theme/init.vim
+source ~/.config/nvim/lua/nv-tree/init.vim
+source ~/.config/nvim/lua/nv-bufferline/init.vim
+source ~/.config/nvim/lua/nv-galaxyline/init.vim
+source ~/.config/nvim/lua/nv-treesitter/init.vim
+source ~/.config/nvim/lua/nv-gitsigns/init.vim
+source ~/.config/nvim/lua/nv-autopair/init.vim
+source ~/.config/nvim/lua/nv-colorizer/init.vim
+source ~/.config/nvim/lua/nv-indent/init.vim
+source ~/.config/nvim/lua/nv-telescope/init.vim
+source ~/.config/nvim/lua/nv-lsp/init.vim
+source ~/.config/nvim/lua/nv-complete/init.vim
+source ~/.config/nvim/lua/nv-lspkind/init.vim
+source ~/.config/nvim/lua/nv-trouble/init.vim

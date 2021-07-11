@@ -12,3 +12,4 @@ source ~/.config/nvim/lua/nv-lsp/init.vim
 source ~/.config/nvim/lua/nv-complete/init.vim
 source ~/.config/nvim/lua/nv-lspkind/init.vim
 source ~/.config/nvim/lua/nv-trouble/init.vim
+source ~/.config/nvim/lua/nv-vsnip/init.vim

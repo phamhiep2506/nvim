@@ -28,4 +28,7 @@ call plug#begin('~/.config/nvim/plugins')
   " Snippet
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
+  " Plug 'hrsh7th/vim-vsnip'
+  " Plug 'hrsh7th/vim-vsnip-integ'
+  " Plug 'rafamadriz/friendly-snippets'
 call plug#end()

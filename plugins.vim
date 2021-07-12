@@ -31,4 +31,7 @@ call plug#begin('~/.config/nvim/plugins')
   " Plug 'hrsh7th/vim-vsnip'
   " Plug 'hrsh7th/vim-vsnip-integ'
   " Plug 'rafamadriz/friendly-snippets'
+  
+  " Git
+  Plug 'tpope/vim-fugitive'
 call plug#end()

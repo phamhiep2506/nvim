@@ -24,3 +24,6 @@ vim.opt.shiftwidth = 2
 
 -- Undo
 vim.opt.undofile = true
+
+-- Statusline
+vim.opt.laststatus = 3

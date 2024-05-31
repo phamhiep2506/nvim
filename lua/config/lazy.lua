@@ -19,9 +19,5 @@ require("config.keymaps")
 
 -- Lazy.nvim
 require("lazy").setup({
-  "tpope/vim-repeat",
-  "tpope/vim-surround",
-  "tpope/vim-commentary",
-  "sbdchd/neoformat",
   { import = "plugins" },
 })

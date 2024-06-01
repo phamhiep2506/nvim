@@ -16,6 +16,7 @@ return {
           normal = { c = { bg = palette.bg0[1], fg = palette.fg0[1] } },
           inactive = { c = { bg = palette.bg0[1], fg = palette.fg0[1] } },
         },
+        ignore_focus = { "NvimTree" },
       },
       sections = {
         lualine_a = {},

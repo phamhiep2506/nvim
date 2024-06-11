@@ -28,9 +28,10 @@ return {
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
+        { name = "vsnip" },
+      }, {
         { name = "buffer" },
         { name = "path" },
-        { name = "vsnip" },
       }),
       formatting = {
         format = require("lspkind").cmp_format({

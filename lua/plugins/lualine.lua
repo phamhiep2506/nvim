@@ -1,20 +1,25 @@
 return {
   "nvim-lualine/lualine.nvim",
   config = function()
-    local configuration = vim.fn["gruvbox_material#get_configuration"]()
-    local palette = vim.fn["gruvbox_material#get_palette"](
-      configuration.background,
-      configuration.foreground,
-      configuration.colors_override
-    )
+    local colors = {
+      bg = "#1d2021",
+      fg = "#ebdbb2",
+      yellow = "#d79921",
+      aqua = "#689d6a",
+      green = "#98971a",
+      orange = "#d65d0e",
+      purple = "#b16286",
+      blue = "#458588",
+      red = "#cc241d",
+    }
 
     local config = {
       options = {
         component_separators = "",
         section_separators = "",
         theme = {
-          normal = { c = { bg = palette.bg0[1], fg = palette.fg0[1] } },
-          inactive = { c = { bg = palette.bg0[1], fg = palette.fg0[1] } },
+          normal = { c = { bg = colors.bg, fg = colors.fg } },
+          inactive = { c = { bg = colors.bg, fg = colors.fg } },
         },
         ignore_focus = { "NvimTree" },
       },
@@ -48,7 +53,7 @@ return {
       function()
         return "▊"
       end,
-      color = { fg = palette.blue[1] },
+      color = { fg = colors.blue },
       padding = { left = 0, right = 1 },
     })
 
@@ -58,26 +63,26 @@ return {
       end,
       color = function()
         local mode_color = {
-          n = palette.red[1],
-          i = palette.green[1],
-          v = palette.blue[1],
-          [""] = palette.blue[1],
-          V = palette.blue[1],
-          c = palette.purple[1],
-          no = palette.red[1],
-          s = palette.orange[1],
-          S = palette.orange[1],
-          [""] = palette.orange[1],
-          ic = palette.yellow[1],
-          R = palette.purple[1],
-          Rv = palette.purple[1],
-          cv = palette.red[1],
-          ce = palette.red[1],
-          r = palette.aqua[1],
-          rm = palette.aqua[1],
-          ["r?"] = palette.aqua[1],
-          ["!"] = palette.red[1],
-          t = palette.red[1],
+          n = colors.red,
+          i = colors.green,
+          v = colors.blue,
+          [""] = colors.blue,
+          V = colors.blue,
+          c = colors.purple,
+          no = colors.red,
+          s = colors.orange,
+          S = colors.orange,
+          [""] = colors.orange,
+          ic = colors.yellow,
+          R = colors.purple,
+          Rv = colors.purple,
+          cv = colors.red,
+          ce = colors.red,
+          r = colors.auqa,
+          rm = colors.auqa,
+          ["r?"] = colors.auqa,
+          ["!"] = colors.red,
+          t = colors.red,
         }
         return { fg = mode_color[vim.fn.mode()] }
       end,
@@ -86,7 +91,7 @@ return {
 
     ins_left({
       "filename",
-      color = { fg = palette.purple[1], gui = "bold" },
+      color = { fg = colors.purple, gui = "bold" },
     })
 
     ins_left({
@@ -98,7 +103,7 @@ return {
     ins_right({
       "branch",
       icon = "",
-      color = { fg = palette.red[1], gui = "bold" },
+      color = { fg = colors.red, gui = "bold" },
     })
 
     ins_right({
@@ -112,14 +117,14 @@ return {
 
     ins_right({
       "progress",
-      color = { fg = palette.fg1[1], gui = "bold" },
+      color = { fg = colors.fg, gui = "bold" },
     })
 
     ins_right({
       function()
         return "▊"
       end,
-      color = { fg = palette.blue[1] },
+      color = { fg = colors.blue },
       padding = { left = 0 },
     })
 

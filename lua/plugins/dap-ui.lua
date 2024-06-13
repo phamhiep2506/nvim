@@ -28,10 +28,7 @@ return {
 
     vim.keymap.set("n", "<leader>de", "<CMD>lua require('dapui').eval()<CR>")
 
-    vim.api.nvim_set_hl(0, "DapBreakpointIcon", { fg = "#cc241d", bg = "none" })
-    vim.api.nvim_set_hl(0, "DapStoppedIcon", { fg = "#d79921", bg = "none" })
-    vim.api.nvim_set_hl(0, "DapStoppedLine", { fg = "#1d2021", bg = "#d79921" })
-    vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointIcon" })
-    vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStoppedIcon", linehl = "DapStoppedLine" })
+    vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "red" })
+    vim.fn.sign_define("DapStopped", { text = "", texthl = "yellow" })
   end,
 }

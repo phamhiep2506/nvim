@@ -15,6 +15,10 @@ return {
             separator = true,
           },
         },
+        diagnostics = "nvim_lsp",
+        diagnostics_indicator = function(count)
+          return "(" .. count .. ")"
+        end,
       },
     })
 

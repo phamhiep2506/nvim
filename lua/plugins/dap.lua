@@ -1,17 +1,31 @@
 return {
   "mfussenegger/nvim-dap",
-  dependencies = {
-    "jay-babu/mason-nvim-dap.nvim"
-  },
   config = function()
-    require("mason-nvim-dap").setup({
-      ensure_installed = {"coreclr"},
-      handlers = {
-        function(config)
-          require("mason-nvim-dap").default_setup(config)
-        end,
+    local dap = require("dap")
+
+    local dapJsonFile = vim.fn.getcwd() .. "/.dap.json"
+
+    if vim.fn.filereadable(dapJsonFile) == 1 then
+      local dapJsonDecode = vim.json.decode(io.open(dapJsonFile, "r"):read("a"))
+
+      -- C#
+      dap.adapters.coreclr = {
+        type = "executable",
+        command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
+        args = { "--interpreter=vscode" },
       }
-    })
+
+      dap.configurations.cs = {
+        {
+          type = "coreclr",
+          name = "launch - netcoredbg",
+          request = "launch",
+          program = dapJsonDecode.program,
+          cwd = dapJsonDecode.cwd,
+          env = dapJsonDecode.env,
+        },
+      }
+    end
 
     vim.keymap.set("n", "<leader>db", "<CMD>lua require('dap').toggle_breakpoint()<CR>")
     vim.keymap.set("n", "<leader>dc", "<CMD>lua require('dap').continue()<CR>")

@@ -1,22 +1,13 @@
 return {
-  "echasnovski/mini.indentscope",
+  "lukas-reineke/indent-blankline.nvim",
   config = function()
-    require("mini.indentscope").setup({
-      symbol = "▏",
-      options = {
-        try_as_border = true,
+    require("ibl").setup({
+      indent = {
+        char = "▏",
       },
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = {
-          "lazy",
-          "mason",
-          "NvimTree",
-          "toggleterm",
-        },
-        callback = function()
-          vim.b.miniindentscope_disable = true
-        end,
-      }),
+      scope = {
+        enabled = false,
+      }
     })
   end,
 }

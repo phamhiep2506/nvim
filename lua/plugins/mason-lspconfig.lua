@@ -24,6 +24,11 @@ return {
             ["textDocument/references"] = require("omnisharp_extended").references_handler,
             ["textDocument/implementation"] = require("omnisharp_extended").implementation_handler,
           },
+          settings = {
+            RoslynExtensionsOptions = {
+              EnableImportCompletion = true,
+            },
+          },
         })
       end,
     }

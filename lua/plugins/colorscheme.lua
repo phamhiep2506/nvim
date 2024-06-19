@@ -15,7 +15,7 @@ return {
     vim.g.gruvbox_material_better_performance = true
     vim.cmd.colorscheme("gruvbox-material")
     vim.api.nvim_set_hl(0, "CursorLine", { fg = "none", bg = "none" })
-    vim.api.nvim_set_hl(0, "CursorLineNR", { fg = "orange", bold = true })
+    vim.api.nvim_set_hl(0, "CursorLineNR", { fg = "#d79921", bold = true })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
   end,

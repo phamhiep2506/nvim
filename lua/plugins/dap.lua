@@ -20,7 +20,10 @@ return {
           type = "coreclr",
           name = "launch - netcoredbg",
           request = "launch",
-          program = dapJsonDecode.program,
+          program = function()
+            vim.cmd("!dotnet build")
+            return dapJsonDecode.program
+          end,
           cwd = dapJsonDecode.cwd,
           env = dapJsonDecode.env,
         },

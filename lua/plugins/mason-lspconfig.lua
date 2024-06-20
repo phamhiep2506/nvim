@@ -21,6 +21,7 @@ return {
             ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
             ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
             ["textDocument/definition"] = require("omnisharp_extended").definition_handler,
+            ["textDocument/typeDefinition"] = require("omnisharp_extended").type_definition_handler,
             ["textDocument/references"] = require("omnisharp_extended").references_handler,
             ["textDocument/implementation"] = require("omnisharp_extended").implementation_handler,
           },

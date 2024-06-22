@@ -5,6 +5,9 @@ return {
   },
   config = function()
     require("nvim-tree").setup({
+      view = {
+        width = 40,
+      },
       renderer = {
         indent_markers = {
           enable = true,
@@ -14,6 +17,7 @@ return {
         enable = true,
       },
     })
+
     vim.keymap.set("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
 
     vim.fn.sign_define("NvimTreeDiagnosticErrorIcon", { texthl = "red" })

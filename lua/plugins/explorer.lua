@@ -16,6 +16,9 @@ return {
       diagnostics = {
         enable = true,
       },
+      update_focused_file = {
+        enable = true,
+      },
     })
 
     vim.keymap.set("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")

@@ -24,8 +24,8 @@ return {
 
     vim.keymap.set("n", "<A-.>", "<CMD>BufferLineCycleNext<CR>")
     vim.keymap.set("n", "<A-,>", "<CMD>BufferLineCyclePrev<CR>")
-    vim.keymap.set("n", "<A->>", "<CMD>BufferLineMoveNext<CR>")
-    vim.keymap.set("n", "<A-<>", "<CMD>BufferLineMovePrev<CR>")
+    vim.keymap.set("n", "<A-]>", "<CMD>BufferLineMoveNext<CR>")
+    vim.keymap.set("n", "<A-[>", "<CMD>BufferLineMovePrev<CR>")
     vim.keymap.set("n", "<A-c>", "<CMD>Bdelete<CR>")
   end,
 }

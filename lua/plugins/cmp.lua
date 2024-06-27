@@ -6,6 +6,7 @@ return {
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
     "onsails/lspkind.nvim",
   },
   config = function()
@@ -29,9 +30,9 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "vsnip" },
-      }, {
         { name = "buffer" },
         { name = "path" },
+        { name = "nvim_lsp_signature_help" },
       }),
       formatting = {
         format = require("lspkind").cmp_format({

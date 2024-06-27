@@ -3,6 +3,9 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
+  keys = {
+    { "<C-n>", "<CMD>NvimTreeToggle<CR>" },
+  },
   config = function()
     require("nvim-tree").setup({
       view = {
@@ -20,8 +23,6 @@ return {
         enable = true,
       },
     })
-
-    vim.keymap.set("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
 
     vim.fn.sign_define("NvimTreeDiagnosticErrorIcon", { texthl = "red" })
     vim.fn.sign_define("NvimTreeDiagnosticWarnIcon", { texthl = "yellow" })
